@@ -1,0 +1,75 @@
+@startuml
+
+class User {
+    - String username
+    - Set<Post> posts
+    - Set<Comment> comments
+    - Set<PostRating> postRatings
+    - Set<CommentRating> commentRatings
+    - Set<Role> roles
+}
+
+class SubMedia {
+    - String name
+    - Set<Post> posts
+}
+
+class Post {
+    - User user
+    - SubMedia subMedia
+    - long timestamp
+    - String title
+    - String content
+    - Set<Comment> comments
+    - Set<PostRating> ratings
+    - PostStatus status
+    - long views
+}
+
+class PostRating {
+    - User user
+    - Post post
+    - int rating
+}
+
+class Comment {
+    - User user
+    - Post post
+    - long timestamp
+    - String content
+    - Set<CommentRating> ratings
+}
+
+class CommentRating {
+    - User user
+    - Comment comment
+    - int rating
+}
+
+enum Role {
+    SUB_MEDIA_MODERATOR,
+    SUB_MEDIA_OWNER,
+    SYSTEM_MODERATOR
+}
+
+enum PostStatus {
+    PENDING,
+    CREATED,
+    DELETED
+}
+
+SubMedia *-- Post
+
+Post *-- Comment
+Post *-- PostRating
+Post *-- PostStatus
+
+Comment *-- CommentRating
+
+User *-- Post
+User *-- Comment
+User *-- PostRating
+User *-- CommentRating
+User *-- Role
+
+@enduml
