@@ -12,6 +12,8 @@ class User {
 class SubMedia {
     - String name
     - Set<Post> posts
+
+    + void createPost(User user, long timestamp, String title, String content)
 }
 
 class Post {
@@ -24,6 +26,12 @@ class Post {
     - Set<PostRating> ratings
     - PostStatus status
     - long views
+
+    + void createComment(User user, long timestamp, String content)
+    + boolean like(User user)
+    + boolean dislike(User user)
+    + boolean neutral(User user)
+    + void addView()
 }
 
 class PostRating {
@@ -38,6 +46,10 @@ class Comment {
     - long timestamp
     - String content
     - Set<CommentRating> ratings
+
+    + boolean like(User user)
+    + boolean dislike(User user)
+    + boolean neutral(User user)
 }
 
 class CommentRating {
