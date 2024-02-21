@@ -9,7 +9,7 @@
 
 ## Projektbeskrivelse
 
-Vores idé er at lave et socialt medie hvor man nemt kan dele, uploade og finde billeder og videoer gennem subkategorier som andre brugere har lavet.
+Vores idé er at lave et socialt medie hvor man kan dele, uploade og finde billeder og videoer gennem subkategorier som andre brugere har lavet.
 
 Eftersom vi har subkategorier hvor man kan snakke om specifikke emner, kan man også finde andre brugere som har samme interesser som en selv.
 
