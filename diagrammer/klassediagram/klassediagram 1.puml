@@ -1,5 +1,10 @@
 @startuml
 
+class Validation {
+    + static boolean validatePost(Post post)
+    + static boolean validateGlobalPostingRequirements(User user)
+}
+
 class User {
     - String username
     - Set<Post> posts
@@ -14,6 +19,7 @@ class SubMedia {
     - Set<Post> posts
 
     + void createPost(User user, long timestamp, String title, String content)
+    + boolean validateRequirements(User user)
 }
 
 class Post {

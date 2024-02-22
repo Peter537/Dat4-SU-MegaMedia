@@ -31,4 +31,15 @@ public class CreatePostTest {
         assertEquals(1, id);
         assertEquals("title", subMedia.getPost(1).getTitle());
     }
+
+    /*
+     * Test created using TDD
+     */
+    @Test
+    void testCreatePostFail_NoTitle() {
+        SubMedia subMedia = new SubMedia("nature");
+        User user1 = new User("user1");
+        long id = subMedia.createPost(user1, System.currentTimeMillis(), null, "content");
+        assertEquals(0, id);
+    }
 }
