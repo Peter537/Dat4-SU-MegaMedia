@@ -1,11 +1,13 @@
 package dat.entities;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.HashSet;
 import java.util.Set;
 
+@NoArgsConstructor
 @Getter
 @Setter
 public class Comment {
@@ -13,7 +15,7 @@ public class Comment {
     @Setter
     private static long idCounter = 1;
 
-    private final long id;
+    private long id;
     private User user;
     private Post post;
     private long timestamp;

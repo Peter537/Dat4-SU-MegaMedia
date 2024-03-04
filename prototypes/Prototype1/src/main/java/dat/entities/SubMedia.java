@@ -1,14 +1,16 @@
 package dat.entities;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import java.util.HashSet;
 import java.util.Set;
 
+@NoArgsConstructor
 @Getter
 public class SubMedia {
 
-    private final String name;
+    private String name;
     private final Set<Post> posts = new HashSet<>();
 
     public SubMedia(String name) {

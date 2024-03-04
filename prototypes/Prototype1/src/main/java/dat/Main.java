@@ -10,7 +10,6 @@ public class Main {
     private static final Scanner SCANNER = new Scanner(System.in);
 
     public static void main(String[] args) {
-        setup();
         while (true) {
             System.out.println("What do you want to do?");
             System.out.println("1. Create post");
@@ -38,12 +37,5 @@ public class Main {
                     System.out.println("Invalid input");
             }
         }
-    }
-
-    private static void setup() {
-        SubMedia subMedia1 = new SubMedia("nature");
-        SubMedia subMedia2 = new SubMedia("cars");
-        User user1 = new User("user1");
-        User user2 = new User("user2");
     }
 }
