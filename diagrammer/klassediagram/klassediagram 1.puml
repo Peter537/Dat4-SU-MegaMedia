@@ -20,9 +20,12 @@ class SubMedia {
 
     + void createPost(User user, long timestamp, String title, String content)
     + boolean validateRequirements(User user)
+    + boolean validatePost(String title,String content)
+    + Post getPost(long id)
 }
 
 class Post {
+    - long id
     - User user
     - SubMedia subMedia
     - long timestamp
@@ -47,6 +50,7 @@ class PostRating {
 }
 
 class Comment {
+    - long id
     - User user
     - Post post
     - long timestamp
