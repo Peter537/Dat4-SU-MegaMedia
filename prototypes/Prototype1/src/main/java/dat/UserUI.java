@@ -13,12 +13,10 @@ public class UserUI {
     private static final Scanner SCANNER = new Scanner(System.in);
 
     public static void run(String username) throws Exception {
-        System.out.println("Hello, I'm ClientOne");
         while (true) {
             System.out.println("Options:");
             System.out.println(" 1. Create post in sub media");
             System.out.println(" 2. View post by id");
-
             String input = SCANNER.nextLine();
             switch (input) {
                 case "1":
